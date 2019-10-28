@@ -1,0 +1,1 @@
+insert into TBL_USER(name,role, USER_NAME,PASSWORD) values('admin','admin','admin','admin');
