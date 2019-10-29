@@ -3,30 +3,34 @@
 <html>  
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>  
+<title>Logon</title>
 
 </head>  
-<body>
-Logon
-<form action="/user/logon" name="userForm" method="post">
-    <table>
 
-        <tr>
-            <td>User name: </td>
-            <td><input type="text" name="userName"  /></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type="text" name="password"  /></td>
-        </tr>
-    </table>
+<body class="text-center">
 
-    <div>
-        <input type="submit" value="Logon">
-        <input type="reset" value="Reset">
+<jsp:include page="header.jsp"></jsp:include>
 
+    <div class="home">
+        <form action="/user/logon" name="userForm" method="post">
+
+            <h1 class="h3 mb-3 font-weight-normal">Please Login</h1>
+
+            <label for="inputName" class="sr-only">User name: </label>
+            <input type="text" id="inputName" name="userName" class="form-control" placeholder="User name" required autofocus>
+
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+
+            <div>${error}</div>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+
+            <button class="btn btn-lg btn-danger btn-block" type="reset">Reset</button>
+
+            <jsp:include page="footer.jsp"></jsp:include>
+        </form>
     </div>
-    <div>${error}</div>
-</form>
-</body>  
+</body>
+
 </html>  

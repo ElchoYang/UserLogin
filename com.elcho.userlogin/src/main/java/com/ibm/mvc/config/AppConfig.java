@@ -41,7 +41,7 @@ public class AppConfig {
         //
         JdbcTemplate template = new JdbcTemplate(dataSource);
 
-        String sql = "drop table  if exists USER_INFO;";
+        String sql = "drop table  if exists TBL_USER;";
         template.execute(sql);
         sql = "create table TBL_USER(ID INTEGER  auto_increment unique, NAME CHAR, ROLE CHAR, email CHAR, USER_NAME CHAR,PASSWORD CHAR);";
         template.execute(sql);

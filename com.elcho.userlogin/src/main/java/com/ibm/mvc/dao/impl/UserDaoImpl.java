@@ -24,7 +24,7 @@ public class UserDaoImpl implements IUserDao{
 		// TODO Auto-generated method stub
 		if( user !=null) {
 			String sql = "insert into TBL_USER(name,role,email, USER_NAME,PASSWORD) values(?,?,?,?,?)";
-			template.update(sql,user.getRealName(), "user",user.getEmail(),user.getUserName(),user.getPassword());
+			template.update(sql,user.getName(), "user",user.getEmail(),user.getUserName(),user.getPassword());
 		}
 	}
 
@@ -61,7 +61,7 @@ public class UserDaoImpl implements IUserDao{
 			//
 			String sql = "update TBL_USER set name=?,role=?,email=?,USER_NAME=?,PASSWORD=? where id = ?";
 			//
-			template.update(sql,user.getRealName(),user.getRole(),user.getUserName(),user.getEmail(),user.getPassword(),user.getId());
+			template.update(sql,user.getName(),user.getRole(),user.getUserName(),user.getEmail(),user.getPassword(),user.getId());
 		}
 	}
 

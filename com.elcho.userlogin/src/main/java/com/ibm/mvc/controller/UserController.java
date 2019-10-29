@@ -20,12 +20,31 @@ public class UserController {
     @Autowired
     private IUserService UserService;
 
-    @RequestMapping(value = "/user")
+    @RequestMapping(value = "/")
     public String Home(Model model) throws Exception {
         List<User> userList = UserService.findAll();
-        log.info("Home");
+        log.info("Index");
         log.info(userList.get(0).getUserName());
-        return "logon";
+        return "index";
+    }
+
+
+    @RequestMapping(value = "/user/admin")
+    public String Admin(Model model) throws Exception {
+        log.info("Admin");
+        return "admin";
+    }
+
+    @RequestMapping(value = "/user/tutorials")
+    public String tutorials(Model model) throws Exception {
+        log.info("Tutorials");
+        return "tutorials";
+    }
+
+    @RequestMapping(value = "/user/update")
+    public String update(Model model) throws Exception {
+        log.info("update");
+        return "update";
     }
 
     @RequestMapping(value = "/user/logon")
@@ -61,10 +80,5 @@ public class UserController {
         return "regist";
     }
 
-    @RequestMapping(value = "/user/update")
-    public String Update(Model model) throws Exception {
-
-        return "update";
-    }
 
 }  

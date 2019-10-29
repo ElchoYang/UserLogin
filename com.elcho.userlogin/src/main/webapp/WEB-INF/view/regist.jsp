@@ -5,10 +5,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration</title>
 
-
-
-	<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$.ajax({
@@ -23,33 +19,39 @@
 		});
 	</script>
 </head>
-<body>
 
-Regist
-<form action="">
-	<table>
-		<tr>
-		 <td>Name: </td>
-		 <td><input type="text" name="name" /></td>
-		</tr>
-		<tr>
-		 <td>Email:</td>
-		 <td><input type="text" name="email"  /></td>
-		</tr>	
-		<tr>
-		 <td>User name: </td>
-		 <td><input type="text" name="username"  /></td>
-		</tr>
-		<tr>
-		 <td>Password:</td>
-		 <td><input type="text" name="password"  /></td>
-		</tr>
-	</table>
-	
-	<div>
-		<button value="Register">Register</button>
-		<button value="Reset" type="reset">Reset</button>
-	</div>
-</form>
+
+<body class="text-center">
+
+<jsp:include page="header.jsp"></jsp:include>
+
+<div class="home">
+	<form action="/user/regist" name="userForm" method="post">
+
+		<h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+
+		<label for="inputName" class="sr-only">Name: </label>
+		<input type="text" id="inputName" name="Name" class="form-control" placeholder="Name" required autofocus>
+
+		<label for="inputEmail" class="sr-only">Email: </label>
+		<input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required>
+
+
+		<label for="inputUsername" class="sr-only">username: </label>
+		<input type="text" id="inputUsername" name="userName" class="form-control" placeholder="User Name" required>
+
+
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+
+
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+		<button class="btn btn-lg btn-danger btn-block" type="reset">Reset</button>
+
+		<jsp:include page="footer.jsp"></jsp:include>
+	</form>
+</div>
+
 </body>
 </html>

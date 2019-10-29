@@ -7,7 +7,7 @@ public class User implements Serializable {
     //����
     private Integer id;
     private String userName;
-    private String realName;
+    private String name;
     private String password;
     private String role;
     private String email;
@@ -32,12 +32,15 @@ public class User implements Serializable {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getRealName() {
-		return realName;
+
+	public String getName() {
+		return name;
 	}
-	public void setRealName(String realName) {
-		this.realName = realName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	public String getPassword() {
 		return password;
 	}
