@@ -5,19 +5,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration</title>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$.ajax({
-				url: "http://localhost:9090/testH2",
-				type:"post",
-				success: function(res) {
-					console.log(res);
-				},
-				error: function(error) {}
-			});
-
-		});
-	</script>
 </head>
 
 
@@ -44,6 +31,7 @@
 		<label for="inputPassword" class="sr-only">Password</label>
 		<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
 
+		<div class="error">${error}</div>
 
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
 

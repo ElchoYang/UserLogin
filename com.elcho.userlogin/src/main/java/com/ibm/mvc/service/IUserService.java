@@ -8,13 +8,13 @@ public interface IUserService {
 
     void add(User u);
 
-    User findUserById(String id);
+    User findUserById(Integer id);
 
     User findUserByUserName(String username);
     
     List<User> findAll();
 
-    void update(User u);
+    void update(User u, Integer id);
 
     void delete(Integer id);
     

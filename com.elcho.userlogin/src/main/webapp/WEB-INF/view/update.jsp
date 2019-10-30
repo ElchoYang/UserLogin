@@ -36,7 +36,7 @@
 
 
         <label for="inputPassword" class="sr-only">Re-Enter Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Re-Enter Password" required>
+        <input type="password" id="inputPassword" name="repassword" class="form-control" placeholder="Re-Enter Password" required>
 
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>

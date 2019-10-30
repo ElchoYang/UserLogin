@@ -21,3 +21,17 @@ body.text-center{
 .header{
     background: #ccc;
 }
+
+.loginbar{
+    font-size: 1rem;
+    top: -3px;
+    position: relative;
+}
+
+.loginbar .text{
+
+}
+
+.loginbar .name{
+
+}

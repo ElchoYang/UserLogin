@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <link>
@@ -10,13 +11,16 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
- <div class="home">
-    <a class="btn btn-lg btn-primary btn-block" href="/user/regist">Register</a>
 
-    <a class="btn btn-lg btn-success btn-block" href="/user/logon">Login</a>
+    <div class="home">
+        <a class="btn btn-lg btn-primary btn-block" href="/user/regist">Register</a>
 
-     <jsp:include page="footer.jsp"></jsp:include>
- </div>
+        <a class="btn btn-lg btn-success btn-block" href="/user/logon">Login</a>
+
+        <jsp:include page="footer.jsp"></jsp:include>
+    </div>
+
+
 
 </body>
 </html>

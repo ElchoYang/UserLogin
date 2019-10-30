@@ -33,7 +33,7 @@ public interface IUserDao {
      * 更新帐户
      * @param user
      */
-    void update(User user);
+    void update(User user, Integer id);
 
     /***************
      * 删除帐户

@@ -33,7 +33,7 @@ public class AppConfig {
 
     public AppConfig( ) {
 
-        LOGGER.debug("---- 初始化 AppConfig 实例....");
+        LOGGER.info("---- 初始化 AppConfig 实例....");
 
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName("org.h2.Driver");
@@ -43,10 +43,11 @@ public class AppConfig {
 
         String sql = "drop table  if exists TBL_USER;";
         template.execute(sql);
-        sql = "create table TBL_USER(ID INTEGER  auto_increment unique, NAME CHAR, ROLE CHAR, email CHAR, USER_NAME CHAR,PASSWORD CHAR);";
+        sql = "create table TBL_USER(ID INTEGER  auto_increment unique, NAME CHAR, ROLE CHAR, email CHAR, USERNAME CHAR,PASSWORD CHAR);";
         template.execute(sql);
-        sql = "insert into TBL_USER(name,role,email, USER_NAME,PASSWORD) values('admin','admin','admin@ibm.com','admin','admin')";
+        sql = "insert into TBL_USER(name,role,email, USERNAME,PASSWORD) values('admin','admin','admin@ibm.com','admin','admin')";
         template.update(sql);
+
     }
 
     @Autowired   //通过获取 @PropertySource 注解 指定的属性文件来得到信息

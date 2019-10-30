@@ -28,7 +28,7 @@ public class UserServiceImpl  implements IUserService{
 		System.out.println("--- save finish ------");
 	}
 
-	public User findUserById(String id) {
+	public User findUserById(Integer id) {
 		// TODO Auto-generated method stub
 		return userDao.findById(id);
 	}
@@ -44,8 +44,8 @@ public class UserServiceImpl  implements IUserService{
 	}
 
 	@Override
-	public void update(User u) {
-		userDao.update(u);
+	public void update(User u, Integer id) {
+		userDao.update(u, id);
 	}
 
 	@Override
